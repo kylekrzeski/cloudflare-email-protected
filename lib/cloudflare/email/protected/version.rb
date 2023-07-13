@@ -2,7 +2,7 @@
 
 module Cloudflare
   module Email
-    module Protected
+    class Protected
       VERSION = "0.1.0"
     end
   end
