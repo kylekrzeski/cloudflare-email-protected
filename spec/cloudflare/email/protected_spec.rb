@@ -21,4 +21,8 @@ RSpec.describe Cloudflare::Email::Protected do
       expect(email1).to eq(email2)
     end
   end
+
+  it "should decode and encode to the same e-mail" do
+    expect("user@domain.tld").to eq(Cloudflare::Email::Protected.decode(Cloudflare::Email::Protected.encode("user@domain.tld")))
+  end
 end
