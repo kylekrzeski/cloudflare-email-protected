@@ -16,7 +16,7 @@ RSpec.describe Cloudflare::Email::Protected do
 
     it 'should decode the specific email' do
       email1 = Cloudflare::Email::Protected.decode(hex1)
-      email2 = Cloudflare::Email::Protected.encode(hex2)
+      email2 = Cloudflare::Email::Protected.decode(hex2)
 
       expect(email1).to eq(email2)
     end
